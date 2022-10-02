@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Task1_Constraint_Layout</string>
-    <string name="title_home">Главная</string>
-    <string name="title_services">Сервисы</string>
-    <string name="title_video">Видео</string>
-    <string name="title_messages">Сообщения</string>
-    <string name="title_clips">Клипы</string>
-    <string name="title_videos">Видео</string>
-</resources>
