@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_homepage"
+        android:title="@string/title_home"
+        android:textColor="@color/blue"/>
+
+    <item
+        android:id="@+id/navigation_services"
+        android:icon="@drawable/ic_services"
+        android:title="@string/title_services"
+        android:textColor="@color/blue"/>
+
+    <item
+        android:id="@+id/navigation_messages"
+        android:icon="@drawable/ic_message"
+        android:title="@string/title_messages"
+        android:textColor="@color/blue"/>
+
+    <item
+        android:id = "@+id/navigation_clips"
+        android:icon="@drawable/ic_clips"
+        android:title="@string/title_clips"
+        android:textColor="@color/blue"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_video"
+        android:title="@string/title_video"
+        android:textColor="@color/blue"/>
+
+
+</menu>
