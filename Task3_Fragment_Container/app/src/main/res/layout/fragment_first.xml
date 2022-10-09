@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="counter"
+            type="int" />
+        <variable
+            name="name"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.FirstFragment">
+
+
+
+        <TextView
+            android:id="@+id/tv_counter"
+            android:layout_width="wrap_content"
+            android:text="@{@string/counterValue(counter)}"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/letters_size_big"
+            app:layout_constraintBottom_toTopOf="@+id/btn_go_to_second_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Counter" />
+
+        <Button
+            android:id="@+id/btn_go_to_second_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_second_fragment"
+            android:backgroundTint="@color/magenta"
+            android:layout_marginLeft="@dimen/margin_for_btn"
+            android:layout_marginHorizontal="@dimen/margin_for_btn"
+            app:layout_constraintBottom_toTopOf="@+id/btn_add_variable_to_counter" />
+
+        <Button
+            android:id="@+id/btn_add_variable_to_counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_counter"
+            android:backgroundTint="@color/magenta"
+            android:layout_marginLeft="@dimen/margin_for_btn"
+            android:layout_marginHorizontal="@dimen/margin_for_btn"
+            app:layout_constraintBottom_toTopOf="@+id/btn_open_dialog_fragment" />
+
+        <Button
+            android:id="@+id/btn_open_dialog_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_dialog_fragment"
+            android:backgroundTint="@color/magenta"
+            android:layout_marginLeft="@dimen/margin_for_btn"
+            android:layout_marginHorizontal="@dimen/margin_for_btn"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Task3_FragmentContainerView</string>
+    <string name="add_to_counter">Add variable to counter</string>
+    <string name="go_to_second_fragment">Go to second fragment</string>
+    <string name="open_dialog_fragment">Open dialog fragment</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="counter">Counter</string>
+    <string name="counterValue">Counter value %1$s</string>
+</resources>
