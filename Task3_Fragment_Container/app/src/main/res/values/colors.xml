@@ -10,13 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#E83939</color>
     <color name="magenta">#DF1BAF</color>
-    <color name="ginger">#EF9712</color>
     <color name="lime_green">#48FB4C</color>
     <color name="dark_blue">#0B05B5</color>
-
-    <array name="colors_array">
-        <item>@color/lime_green</item>
-        <item>@color/blue</item>
-        <item>@color/magenta</item>
-    </array>
 </resources>

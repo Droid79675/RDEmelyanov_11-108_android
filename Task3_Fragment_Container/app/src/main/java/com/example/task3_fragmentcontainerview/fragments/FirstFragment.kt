@@ -31,12 +31,12 @@ class FirstFragment : Fragment() {
         with(binding) {
 
             btnOpenDialogFragment.setOnClickListener {
-                val dialog = DialogFragment(counterValue = counter
-
-                ) { counterFromDialogFragment ->
+                //достаём counter, посредством создания экземпляра dialogFragment
+                val dialog = DialogFragment(counterValue = counter)
+                { counterFromDialogFragment ->
                     counter = counterFromDialogFragment
                     binding.counter = counter
-
+                    //применяем counter, что мы достали, и кладём его в bundle, чтобы передать его далее
                     arguments?.apply {
                         putInt(Constants.COUNTER_KEY, counterFromDialogFragment)
                     }
@@ -52,16 +52,17 @@ class FirstFragment : Fragment() {
                     putInt(Constants.COUNTER_KEY, counter)
                 }
             }
+
             btnGoToSecondFragment.setOnClickListener {
-                parentFragmentManager.beginTransaction().replace(
-                    Constants.containerId,
-                    SecondFragment.getInstance(arguments),
-                    SecondFragment.TAG_SECOND_FRAGMENT
-                ).setCustomAnimations(
+                parentFragmentManager.beginTransaction().setCustomAnimations(
                     android.R.anim.fade_in,
                     android.R.anim.fade_out,
                     android.R.anim.fade_in,
                     android.R.anim.fade_out
+                ).replace(
+                    Constants.containerId,
+                    SecondFragment.getInstance(arguments),
+                    SecondFragment.TAG_SECOND_FRAGMENT
                 )
                     .addToBackStack(null)
                     .commit()
@@ -76,6 +77,7 @@ class FirstFragment : Fragment() {
 
     companion object {
         const val TAG_FIRST_FRAGMENT = "TAG_FIRST_FRAGMENT"
+        //сохраняем данные из bundle в аргументы, чтобы отображались в последствии изменения counter-а
         fun getInstance(bundle: Bundle?): FirstFragment {
             val firstFragment = FirstFragment()
             firstFragment.arguments = bundle

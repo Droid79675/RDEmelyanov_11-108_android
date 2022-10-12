@@ -6,6 +6,7 @@ import android.view.View
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.example.task3_fragmentcontainerview.Constants
 import com.example.task3_fragmentcontainerview.R
 
@@ -26,26 +27,24 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        //достаём из bundle
         val counterValue = arguments?.get(Constants.COUNTER_KEY) ?: 0
 
-        var colorValue: Int = 0
         with(binding) {
 
             when (counterValue) {
                 in 0..50 -> {
-                    colorValue = resources.getIntArray(R.array.colors_array)[0]
+                    mainScreen.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.lime_green))
                 }
                 in 51..100 -> {
-                    colorValue = resources.getIntArray(R.array.colors_array)[1]
+                    mainScreen.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.blue))
                 }
                 in 100..Integer.MAX_VALUE ->{
-                    colorValue = resources.getIntArray(R.array.colors_array)[2]
+                    mainScreen.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.magenta))
                 }
             }
 
             tvCounterValue.text = "Counter value: $counterValue"
-            mainScreen.setBackgroundColor(colorValue)
 
         }
     }
