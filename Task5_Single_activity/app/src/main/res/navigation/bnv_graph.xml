@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnv_graph"
+    app:startDestination="@id/nested_graph">
+
+    <include app:graph="@navigation/nested_graph"/>
+
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.example.practice_27_10_22.btv.MusicFragment"
+        android:label="MusicFragment"
+        tools:layout="@layout/fragment_music"/>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.practice_27_10_22.btv.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.practice_27_10_22.btv.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.practice_27_10_22.btv.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+</navigation>

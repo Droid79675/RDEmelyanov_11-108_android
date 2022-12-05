@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frag_cont.FragmentContainer">
+
+    <Button
+        android:id="@+id/btn_fighter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/azure"
+        android:text="@string/nav_to_fighters"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_attack_plane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/azure"
+        android:text="@string/nav_to_attack_planes"
+        app:layout_constraintTop_toBottomOf="@id/btn_fighter"/>
+
+    <Button
+        android:id="@+id/btn_interceptor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/azure"
+        android:text="@string/nav_to_interceptors"
+        app:layout_constraintTop_toBottomOf="@id/btn_attack_plane"/>
+
+    <Button
+        android:id="@+id/btn_bomber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/azure"
+        android:text="@string/nav_to_bombers"
+        app:layout_constraintTop_toBottomOf="@id/btn_interceptor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
