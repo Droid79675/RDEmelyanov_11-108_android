@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Task4_recycler_view</string>
-    <string name="title_for_car_fragment">Cars</string>
-    <string name="title_for_car_info">Car</string>
-</resources>
