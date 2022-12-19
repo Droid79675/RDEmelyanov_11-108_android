@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_graph"
+    app:startDestination="@+id/fragmentContainer">
+
+    <fragment
+        android:id="@+id/fragmentContainer"
+        android:name="com.example.practice_27_10_22.frag_cont.FragmentContainer"
+        android:label="fragment_container"
+        tools:layout="@layout/fragment_container" >
+        <action
+            android:id="@+id/action_fragmentContainer_to_fighterFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/fighterFragment" />
+        <action
+            android:id="@+id/action_fragmentContainer_to_interceptorsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/interceptorsFragment" />
+        <action
+            android:id="@+id/action_fragmentContainer_to_attackPlanesFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/attackPlanesFragment" />
+        <action
+            android:id="@+id/action_fragmentContainer_to_bombersFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/bombersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fighterFragment"
+        android:name="com.example.practice_27_10_22.frag_cont.FighterFragment"
+        android:label="FighterFragment"
+        tools:layout="@layout/fragment_fighter">
+        <action
+            android:id="@+id/action_fighterFragment_to_fragmentContainer"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/fragmentContainer" />
+    </fragment>
+    <fragment
+        android:id="@+id/attackPlanesFragment"
+        android:name="com.example.practice_27_10_22.frag_cont.AttackPlanesFragment"
+        android:label="AttackPlanesFragment"
+        tools:layout="@layout/fragment_attack_planes">
+        <action
+            android:id="@+id/action_attackPlanesFragment_to_fragmentContainer"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/fragmentContainer" />
+    </fragment>
+    <fragment
+        android:id="@+id/interceptorsFragment"
+        android:name="com.example.practice_27_10_22.frag_cont.InterceptorsFragment"
+        android:label="InterceptorsFragment"
+        tools:layout="@layout/fragment_interceptors">
+        <action
+            android:id="@+id/action_interceptorsFragment_to_fragmentContainer"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/fragmentContainer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bombersFragment"
+        android:name="com.example.practice_27_10_22.frag_cont.BombersFragment"
+        android:label="BombersFragment"
+        tools:layout="@layout/fragment_bombers">
+        <action
+            android:id="@+id/action_bombersFragment_to_fragmentContainer"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/fragmentContainer" />
+    </fragment>
+</navigation>
